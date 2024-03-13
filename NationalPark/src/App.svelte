@@ -5,7 +5,7 @@
 
 <Navbar />
 <Header title="Summit Seeker" />
-
+ 
 <main>
   <h2>National Park</h2>
 </main>
