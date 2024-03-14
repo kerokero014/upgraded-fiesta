@@ -4,7 +4,8 @@
     { name: "About", url: "/about" },
     { name: "Contact", url: "/contact" },
     { name: "Plan Trip", url: "/Trip" },
-    { name: "Sing Up", url: "/singup" },
+    { name: "Sign Up", url: "/signup" },
+    { name: "Parks", url: "/parks/index.html"}
   ];
 
   let activeLink = "/";
