@@ -5,7 +5,7 @@
 
 <Header title="Summit Seekers" />
 
-<main>
+<main class="content">
   <h2>Welcome to National Park</h2>
 </main>
 
