@@ -13,7 +13,7 @@
       <div class="three"></div>
       <div class="four"></div>
       <div class="five"></div>
-      <Navbar />
+      <!--<Navbar />-->
     </div>
   </div>
 </header>
