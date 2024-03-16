@@ -4,16 +4,19 @@
 </script>
 
 <header>
-  <div class="overlay">
-    <div class="parallax">
-      <h1>{title}</h1>
-      <span>Hike | Camp | Explore </span>
-      <div class="one"></div>
-      <div class="two"></div>
-      <div class="three"></div>
-      <div class="four"></div>
-      <div class="five"></div>
-      <!--<Navbar />-->
-    </div>
-  </div>
+  <h1 class="logo">{title}</h1>
+  <div class="one"></div>
+  <div class="two"></div>
+  <div class="three"></div>
+  <div class="four"></div>
+  <div class="five"></div>
+  <Navbar />
 </header>
+
+
+<style>
+  .logo {
+    font-size: 2rem;
+    margin:10px 3px;
+  }
+</style>
