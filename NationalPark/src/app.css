@@ -5,6 +5,11 @@
   list-style: none;
 }
 
+/* Hide scrollbar for Chrome, Safari and Opera */
+body::-webkit-scrollbar {
+  display: none;
+}
+
 body {
   background: whitesmoke;
   min-height: 100vh;
