@@ -3,7 +3,6 @@
     { name: "Home", url: "/" },
     { name: "Contact", url: "/contact" },
     { name: "Plan Trip", url: "/Trip" },
-    { name: "Sign Up", url: "/signup" },
     { name: "Parks", url: "/parks/index.html" },
   ];
 
