@@ -13,10 +13,9 @@
   <Navbar />
 </header>
 
-
 <style>
   .logo {
     font-size: 2rem;
-    margin:10px 3px;
+    margin: 10px 3px;
   }
 </style>
