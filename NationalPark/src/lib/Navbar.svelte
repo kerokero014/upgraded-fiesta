@@ -1,7 +1,7 @@
 <script>
   let links = [
     { name: "Home", url: "/" },
-    { name: "Contact", url: "/contact" },
+    { name: "Contact Us", url: "/contactus/index.html" },
     { name: "Plan Trip", url: "/Trip" },
     { name: "Parks", url: "/parks/index.html" },
   ];

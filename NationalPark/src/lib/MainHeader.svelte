@@ -5,11 +5,6 @@
 
 <header>
   <h1 class="logo">{title}</h1>
-  <div class="one"></div>
-  <div class="two"></div>
-  <div class="three"></div>
-  <div class="four"></div>
-  <div class="five"></div>
   <Navbar />
 </header>
 

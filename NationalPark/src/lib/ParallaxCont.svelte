@@ -44,8 +44,8 @@
   <img src="./src/imgs/hill3.png" id="hill3" alt="Base Hill three" />
   <img src="./src/imgs/hill4.png" id="hill4" alt="Base Hill four" />
   <img src="./src/imgs/hill5.png" id="hill5" alt="Base Hill five" />
-  <img src="./src/imgs/tree.png" id="tree" alt="Tree image png" />
+  <img src="./src/imgs/tree.png" id="tree" alt="Tree png" />
   <h2 id="text">Summit Seekers</h2>
-  <img src="./src/imgs/leaf.png" id="leaf" alt="image leaf" />
-  <img src="./src/imgs/plant.png" id="plant" alt="Plant image png" />
+  <img src="./src/imgs/leaf.png" id="leaf" alt=" leaf" />
+  <img src="./src/imgs/plant.png" id="plant" alt="Plant png" />
 </section>
