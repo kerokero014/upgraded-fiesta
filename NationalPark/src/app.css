@@ -13,7 +13,9 @@ body::-webkit-scrollbar {
 body {
   background: whitesmoke;
   min-height: 100vh;
+  max-height: 100vh;
   overflow-x: hidden;
+  overflow-y: auto; /* Add this line to enable scrolling within the page if content exceeds the max height */
 }
 
 header {
