@@ -15,6 +15,5 @@
   quidem distinctio sit illo, assumenda velit. Ut itaque impedit eligendi!
 </h1>
 
-</main>
 
 <Footer companyName="Summit Seekers" />
