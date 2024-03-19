@@ -4,21 +4,22 @@
   import Search from "./Search.svelte";
 
   let parksList = [];
+  let places = [];
 
   const baseURL = "https://developer.nps.gov/api/v1/parks";
   const apiKey = "4NkX3tOUbCHhiaSreQql8y0rvhstMo2Z4zWOWR3C";
 
   async function fetchData() {
-    try {
-      const res = await fetch(`${baseURL}?api_key=${apiKey}`);
-      if (!res.ok) {
-        throw new Error("Server response wasn't OK");
+      try {
+        const res = await fetch(`${baseURL}?api_key=${apiKey}`);
+        if (!res.ok) {
+          throw new Error("Server response wasn't OK");
+        }
+        const data = await res.json();
+        parksList = data.data.map(park => park.fullName); // Extract park names
+      } catch (error) {
+        console.error("Error fetching data:", error);
       }
-      const data = await res.json();
-      parksList = data.data.map((park) => park.fullName); // Extract park names
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
   }
 
   onMount(() => {
@@ -27,7 +28,7 @@
 </script>
 
 <Header title="National Parks" />
-<Search />
+<Search {places}/>
 
 <h1>List of National Parks</h1>
 
