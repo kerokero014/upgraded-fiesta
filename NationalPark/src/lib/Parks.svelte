@@ -1,7 +1,6 @@
 <script>
   import { onMount } from "svelte";
   import Header from "./MainHeader.svelte";
-  import Navbar from "./Navbar.svelte";
   import Search from "./Search.svelte";
 
   let parksList = [];
@@ -29,7 +28,6 @@
 </script>
 
 <Header title="National Parks" />
-<Navbar />
 <Search {places}/>
 
 <h1>List of National Parks</h1>
