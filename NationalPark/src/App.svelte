@@ -1,12 +1,22 @@
 <script>
   import Header from "./lib/MainHeader.svelte";
   import Footer from "./lib/MainFooter.svelte";
+<<<<<<< Updated upstream
   import ParallaxCont from "./lib/ParallaxCont.svelte";
 </script>
 
 <Header title="Summit Seekers" />
 
 <ParallaxCont />
+=======
+  import Navbar from "./lib/Navbar.svelte";
+</script>
+
+<Header title="Summit Seekers" />
+<Navbar/>
+<main class="container">
+  <h2>Welcome to National Park</h2>
+>>>>>>> Stashed changes
 
 <section class="sec">
   <h2>
