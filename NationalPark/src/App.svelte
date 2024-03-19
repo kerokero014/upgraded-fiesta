@@ -1,55 +1,19 @@
 <script>
   import Header from "./lib/MainHeader.svelte";
   import Footer from "./lib/MainFooter.svelte";
-<<<<<<< Updated upstream
   import ParallaxCont from "./lib/ParallaxCont.svelte";
 </script>
 
 <Header title="Summit Seekers" />
 
 <ParallaxCont />
-=======
-  import Navbar from "./lib/Navbar.svelte";
-</script>
 
-<Header title="Summit Seekers" />
-<Navbar/>
-<main class="container">
-  <h2>Welcome to National Park</h2>
->>>>>>> Stashed changes
+<h2>Welcome to National Park</h2>
 
-<section class="sec">
-  <h2>
-    Welcome to Summit Seekers! We are a community of hikers and outdoor
-    enthusiasts who love to explore the great outdoors. Our mission is to
-    provide a platform for hikers to connect, share experiences, and discover
-    new trails. Whether you are a seasoned hiker or just starting out, we
-    welcome you to join our community and start your next adventure!
-  </h2>
-  <h2>
-    Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut!Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-    sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-    inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-    Ut!
-  </h2>
-</section>
+<h1>
+  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non animi,
+  consequatur cupiditate ab ut nihil quibusdam et consectetur dolore, veniam
+  quidem distinctio sit illo, assumenda velit. Ut itaque impedit eligendi!
+</h1>
 
 <Footer companyName="Summit Seekers" />
