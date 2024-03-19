@@ -88,7 +88,8 @@
 
   :root {
     --black: #000;
-    --white: #ffffff5c;
+    --white: #ffffffe7;
+    --lightergrey: #d6d6d6;
     --darkergrey: #333;
     --quiteblue: #293d31;
     --red: #ff4136;
