@@ -90,7 +90,7 @@
     --black: #000;
     --white: #ffffff5c;
     --darkergrey: #333;
-    --quiteblue: #293D31;
+    --quiteblue: #293d31;
     --red: #ff4136;
   }
 
@@ -100,12 +100,7 @@
     box-sizing: border-box;
     font-family: "Baloo 2", cursive;
   }
-    body {
-      background-image: url('path_to_your_image.jpg');
-      background-repeat: no-repeat;
-      background-size: cover;
-    }
-    
+
   .container .contactinfo {
     display: flex;
     top: 0;
@@ -206,6 +201,7 @@
     border: none;
     border-bottom: 1px solid var(--darkergrey);
     outline: none;
+    background-color: transparent;
   }
 
   .container .contactusform .formBox .inputBox textarea {
@@ -320,6 +316,7 @@
       box-shadow: 0 50px 50px rgba(0, 0, 0, 0.5);
       margin-left: 150px;
       padding-left: 250px;
+      background-color: var(--white);
     }
 
     .container .contactusform .formBox {
