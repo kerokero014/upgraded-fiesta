@@ -326,7 +326,7 @@
 
     .button {
       appearance: button;
-      background-color: #003329;
+      background-color: #96a79d;
       border: solid transparent;
       border-radius: 16px;
       border-width: 0 0 4px;
