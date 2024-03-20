@@ -2,7 +2,7 @@
   let links = [
     { name: "Home", url: "/" },
     { name: "Contact Us", url: "/contactus/index.html" },
-    { name: "Plan Trip", url: "/Trip" },
+    { name: "Plan Trip", url: "/plan_trip/index.html" },
     { name: "Parks", url: "/parks/index.html" },
   ];
 
