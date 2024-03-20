@@ -1,5 +1,5 @@
 <script>
-    export let places;
+    export let places = [];
     let query = "";
     const apiKey = "4NkX3tOUbCHhiaSreQql8y0rvhstMo2Z4zWOWR3C"; // Replace with your actual NPS API key
 
@@ -16,7 +16,6 @@
         }
     }
 </script>
-
 <input type="search" bind:value={query}>
 <button on:click={searchHandler}>Search</button>
 
@@ -24,7 +23,6 @@
     <ul>
         {#each places as place}
             <li><a href={`https://www.nps.gov/${place.parkCode}`} target="_blank">{place.fullName}</a></li>
-            <!-- Adjust the properties according to the API response -->
         {/each}
     </ul>
 {:else}
