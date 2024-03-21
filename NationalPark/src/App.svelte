@@ -7,13 +7,7 @@
 
 <Header title="Summit Seekers" />
 
+
 <ParallaxCont />
-
-<h1>
-  Lorem, ipsum dolor sit amet consectetur adipisicing elit. Non animi,
-  consequatur cupiditate ab ut nihil quibusdam et consectetur dolore, veniam
-  quidem distinctio sit illo, assumenda velit. Ut itaque impedit eligendi!
-</h1>
-
 
 <Footer companyName="Summit Seekers" />
