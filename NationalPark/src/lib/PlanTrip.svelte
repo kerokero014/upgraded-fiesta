@@ -4,43 +4,51 @@
     import ParallaxCont from "./ParallaxPlanT.svelte";
   </script>
   
+  
   <Header title="Summit Seekers" />
   
-  <ParallaxCont />
-  
-  <section class="sec">
-    <h2>
-      Welcome to Summit Seekers! We are a community of hikers and outdoor
-      enthusiasts who love to explore the great outdoors. Our mission is to
-      provide a platform for hikers to connect, share experiences, and discover
-      new trails. Whether you are a seasoned hiker or just starting out, we
-      welcome you to join our community and start your next adventure!
-    </h2>
-    <h2>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut!Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut! Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia ducimus
-      sunt nisi quam dolor suscipit doloremque repudiandae ipsa, corrupti velit
-      inventore quaerat asperiores dolores. Facere veritatis incidunt porro ipsam.
-      Ut!
-    </h2>
+  <section class="flex-box">
+    <div>
+      <img src="../src/imgs/brazil-4808992_1280.jpg" alt="">
+    <h1>name title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis 
+      modi quaerat odio, voluptas aspernatur nam non a 
+      quibusdam dolores molestias alias libero ullam, 
+      delectus magnam omnis possimus suscipit, 
+      amet saepe.</p>
+      <button class="button">plan trip</button>
+    </div>
+    <div>
+      <img src="../src/imgs/greece-3384386_1280.jpg" alt="">
+    <h1>name title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis 
+      modi quaerat odio, voluptas aspernatur nam non a 
+      quibusdam dolores molestias alias libero ullam, 
+      delectus magnam omnis possimus suscipit, 
+      amet saepe.</p>
+      <button class="button">plan trip</button>
+    </div>
+    <div>
+      <img src="../src/imgs/lake-7892215_1280.jpg" alt="">
+    <h1>name title</h1>
+    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis 
+      modi quaerat odio, voluptas aspernatur nam non a 
+      quibusdam dolores molestias alias libero ullam, 
+      delectus magnam omnis possimus suscipit, 
+      amet saepe.</p>
+      <button class="button">plan trip</button>
+    </div>
   </section>
-  
+  <style>
+    .button {
+  background-color: #04AA6D; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+  </style>
   <Footer companyName="Summit Seekers" />
-  

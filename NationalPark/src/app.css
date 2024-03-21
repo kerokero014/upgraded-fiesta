@@ -40,6 +40,15 @@ header {
   font-weight: 500;
   font-size: 25px;
 }
+.flex-box{
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  gap: 20px;
+}
+.flex-box>p{
+  margin: 20px;
+}
 
 .navigation a:hover,
 .navigation a.active {
