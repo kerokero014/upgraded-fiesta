@@ -40,13 +40,13 @@ header {
   font-weight: 500;
   font-size: 25px;
 }
-.flex-box{
+.flex-box {
   display: flex;
   flex-direction: column;
   text-align: center;
   gap: 20px;
 }
-.flex-box>p{
+.flex-box > p {
   margin: 20px;
 }
 
@@ -84,17 +84,49 @@ header {
 
 .sec {
   position: relative;
+  display: flex;
+  flex-direction: column;
   background: #003329;
   padding: 100px;
   color: white;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "info1 image1";
 }
 
-.sec h2 {
+.image1 {
+  grid-area: image1;
+  border-radius: 15px;
+}
+.info1 {
+  grid-area: info1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  color: white;
+}
+
+.sec h1 {
   font-size: 3rem;
   color: white;
   margin-bottom: 20px;
+  text-align: left;
 }
 
 .sec p {
-  font-size: large;
+  font-size: 35px;
+  padding: 5px;
+}
+
+.third {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  background: #262926;
+  padding: 100px;
+  color: white;
 }
