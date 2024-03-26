@@ -1,7 +1,7 @@
 <script>
     import Header from "./MainHeader.svelte";
     import Footer from "./MainFooter.svelte";
-    import ParallaxCont from "./ParallaxPlanT.svelte";
+    import ParallaxCont from "./ParallaxCont.svelte";
   </script>
   
   

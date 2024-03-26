@@ -1,45 +1,49 @@
 <script>
 </script>
 
-<div class="grid-container">
-  <div class="park-item">
-    <img
-      src="./src/imgs/yosemite.jpeg"
-      alt="yosemite"
-      width="200"
-      height="150"
-    />
+<div class="popular-container">
+  <div class="Pparks">
+    <img src="./src/imgs/yosemite.jpeg" alt="yosemite" />
     <p>Yosemite National Park</p>
   </div>
-  <div class="park-item">
-    <img
-      src="./src/imgs/yellowstone.jpeg"
-      alt="yellowstone"
-      width="200"
-      height="150"
-    />
+  <div class="Pparks">
+    <img src="./src/imgs/yellowstone.webp" alt="yellowstone" />
     <p>Yellowstone National Park</p>
   </div>
-  <div class="park-item">
-    <img
-      src="./src/imgs/grandcanyon.jpeg"
-      alt="grandcanyon"
-      width="200"
-      height="150"
-    />
+  <div class="Pparks">
+    <img src="./src/imgs/grandcanyon.webp" alt="grandcanyon" />
     <p>Grand Canyon National Park</p>
   </div>
-  <div class="park-item">
-    <img
-      src="./src/imgs/rockymountain.jpeg"
-      alt="rockymountain"
-      width="200"
-      height="150"
-    />
+  <div class="Pparks">
+    <img src="./src/imgs/rockymountain.jpg" alt="rockymountain" />
     <p>Rocky Mountain National Park</p>
   </div>
-  <div class="park-item">
-    <img src="./src/imgs/sequoia.jpeg" alt="sequoia" width="200" height="150" />
+  <div class="Pparks">
+    <img src="./src/imgs/sequoia.jpg" alt="sequoia" />
     <p>Sequoia National Park</p>
   </div>
 </div>
+
+<style>
+  .popular-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    margin: 0 -20px;
+    text-align: center;
+  }
+  .Pparks img {
+    padding: 5px;
+    width: 400px;
+    height: 300px;
+    border-radius: 15px;
+  }
+
+  .Pparks:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
+  }
+
+</style>

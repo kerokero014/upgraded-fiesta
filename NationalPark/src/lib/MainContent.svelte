@@ -33,12 +33,12 @@
 <style>
   .button {
     appearance: button;
-    background-color: #96a79d;
+    background-color: #a1d4b6;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
     box-sizing: border-box;
-    color: #ffffff;
+    color: #ededed;
     cursor: pointer;
     display: inline-block;
     font-family: din-round, sans-serif;
@@ -64,7 +64,7 @@
 
   .button:after {
     background-clip: padding-box;
-    background-color: #293d31;
+    background-color: #37312a;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
