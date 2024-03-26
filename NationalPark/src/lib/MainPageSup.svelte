@@ -1,21 +1,5 @@
 <script>
-  import { writable } from "svelte/store";
-  import {
-    getProductsByCategory,
-    getProductsBySearch,
-  } from "../js/externalService.mjs";
-
-  let products = writable([]);
-
-  async function fetchProducts(category) {
-    try {
-      $products = await getProductsByCategory(category); // Set the fetched products to the reactive variable
-    } catch (error) {
-      console.error("Error fetching products:", error);
-    }
-  }
-
-  fetchProducts("your-category");
+  
 </script>
 
 <h1>Missing equipment?</h1>
@@ -27,14 +11,7 @@
 </p>
 <button class="button">Get Supplies!</button>
 
-<div>
-  <h2>Our Products</h2>
-  <ul>
-    {#each $products as product}
-      <li>{product.name}</li>
-    {/each}
-  </ul>
-</div>
+
 
 <style>
   .button {
