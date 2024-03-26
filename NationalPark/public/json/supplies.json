@@ -1,0 +1,34 @@
+{
+    "supplies_list": [
+        {
+            "name": "Tent"
+        },
+        {
+            "name": "Sleeping bag"
+        },
+        {
+            "name": "Flashlight"
+        },
+        {
+            "name": "Portable stove"
+        },
+        {
+            "name": "Cooking utensils"
+        },
+        {
+            "name": "Water bottles"
+        },
+        {
+            "name": "First aid kit"
+        },
+        {
+            "name": "Firewood"
+        },
+        {
+            "name": "Matches/Lighter"
+        },
+        {
+            "name": "Map/Compass"
+        }
+    ]
+}
