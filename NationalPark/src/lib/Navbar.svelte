@@ -19,7 +19,7 @@
     // For example, you might want to navigate to a different page or update the UI
     
     // For now, let's just log a message to indicate the token was deleted
-    console.log('Token deleted successfully!');}
+    alert('Form data deleted successfully!');}
 </script>
 
 <nav class="navigation">
