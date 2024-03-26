@@ -7,7 +7,6 @@
 
 <Header title="Summit Seekers" />
 
-
 <ParallaxCont />
 
 <Footer companyName="Summit Seekers" />

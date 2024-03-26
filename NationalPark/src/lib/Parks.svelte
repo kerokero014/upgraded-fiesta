@@ -2,6 +2,7 @@
   import { onMount } from "svelte";
   import Header from "./MainHeader.svelte";
   import Search from "./Search.svelte";
+  import Footer from "../lib/MainFooter.svelte";
 
   let parksList = [];
   let places = [];
@@ -37,6 +38,8 @@
     <li>{park}</li>
   {/each}
 </ul>
+
+<Footer />
 
 <style>
   /* Add your styles here */

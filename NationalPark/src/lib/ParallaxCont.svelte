@@ -1,5 +1,6 @@
 <script>
   import { onMount, beforeUpdate } from "svelte";
+  import MainContent from "./MainContent.svelte";
 
   let text, leaf, hill1, hill2, hill3, hill4, hill5;
 
@@ -49,3 +50,6 @@
   <img src="./src/imgs/leaf.png" id="leaf" alt=" leaf" />
   <img src="./src/imgs/plant.png" id="plant" alt="Plant png" />
 </section>
+
+<MainContent />
+
