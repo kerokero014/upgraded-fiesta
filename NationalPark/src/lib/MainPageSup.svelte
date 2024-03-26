@@ -1,39 +1,18 @@
 <script>
-  import ImageGrid from "./ImageGrid.svelte";
-  import PopularParks from "./PopularParks.svelte";
-  import MainPageSup from "./MainPageSup.svelte";
 </script>
 
-<section class="sec">
-  <div class="info1">
-    <h1>Who We Are?</h1>
-    <p>
-      We are a group of individuals who are passionate about the great outdoors.
-      We are dedicated to providing the best experience for our customers. We
-      offer a wide range of services to help you get the most out of your
-      outdoor experience.
-    </p>
-    <p>
-      Whether you are an experienced hiker or a beginner, we have something for
-      everyone. Our team of experts will help you plan your trip and make sure
-      you have everything you need to enjoy your time in the great outdoors.
-    </p>
-    <button class="button">Plan a trip!</button>
-  </div>
 
-  <img src="./src/imgs/yosemite.jpeg" alt="yosemite" class="image1" />
-</section>
 
-<section class="third">
-  <h1>Most Visited Parks:</h1>
-  <PopularParks />
-  <h2>Other parks you might like:</h2>
-  <ImageGrid />
-</section>
+<h1>Missing equipment?</h1>
+<p>
+  We offer a wide range of equipment for rent to help you get the most out of
+  your outdoor experience. Whether you need a tent, sleeping bag, or hiking
+  boots, we have you covered. Our team of experts will help you find the perfect
+  equipment for your trip.
+</p>
+<button class="button">Get Supplies!</button>
 
-<section class="fourth">
-  <MainPageSup />
-</section>
+
 
 <style>
   .button {
