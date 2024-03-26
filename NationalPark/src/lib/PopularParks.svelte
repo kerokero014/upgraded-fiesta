@@ -28,7 +28,7 @@
   .popular-container {
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: center;
     align-items: center;
     padding: 10px;
     margin: 0 -20px;
@@ -36,8 +36,8 @@
   }
   .Pparks img {
     padding: 5px;
-    width: 400px;
-    height: 300px;
+    width: 355px;
+    height: 250px;
     border-radius: 15px;
   }
 

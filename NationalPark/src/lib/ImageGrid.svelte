@@ -38,8 +38,9 @@
 <style>
   .grid-container {
     display: flex;
-    gap: 20px;
+    gap: 8px;
     align-items: center;
+    justify-content: center;
   }
 
   .park-item img {
