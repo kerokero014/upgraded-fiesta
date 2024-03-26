@@ -29,12 +29,7 @@
 <div class="grid-container">
   {#each parksList.slice(0, 5) as park}
     <div class="park-item">
-      <img
-        src={park.images[0]?.url}
-        alt={park.fullName}
-        width="200"
-        height="150"
-      />
+      <img src={park.images[0]?.url} alt={park.fullName} />
       <p>{park.fullName}</p>
     </div>
   {/each}
@@ -42,18 +37,26 @@
 
 <style>
   .grid-container {
-    display: grid;
-    grid-template-columns: repeat(5, 1fr);
+    display: flex;
     gap: 20px;
+    align-items: center;
+  }
+
+  .park-item img {
+    border-radius: 10px;
+    padding: 5px;
+    width: 350px;
+    height: auto;
+    border-radius: 15px;
+  }
+
+  .park-item:hover {
+    transform: scale(1.1);
+    transition: transform 0.4s ease-in-out;
   }
 
   .park-item {
     text-align: center;
     border-radius: 10px;
-  }
-
-  .park-item {
-    width: 50%;
-    height: 100%;
   }
 </style>
