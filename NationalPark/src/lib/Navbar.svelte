@@ -11,6 +11,15 @@
 
   let activeLink = "/";
   const token = localStorage.getItem('so-token');
+  function deleteToken() {
+    // Remove the token from local storage
+    localStorage.removeItem('so-token');
+    
+    // Optionally, you can perform additional actions after deleting the token
+    // For example, you might want to navigate to a different page or update the UI
+    
+    // For now, let's just log a message to indicate the token was deleted
+    console.log('Token deleted successfully!');}
 </script>
 
 <nav class="navigation">
@@ -19,6 +28,7 @@
   {/each}
    {#if userName}
    <a class="login" href="/">Welcome, {userName}!</a>
+   <a on:click={deleteToken}  href="/">Log out</a>
    {:else}
    <a class="login" href="../login/login.html">Log in</a>
    {/if}
