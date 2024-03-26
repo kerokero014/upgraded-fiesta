@@ -2,6 +2,58 @@
     import Header from "./MainHeader.svelte";
     import Footer from "./MainFooter.svelte";
     import ParallaxCont from "./ParallaxPlanT.svelte";
+
+    async function server_response() {
+  let input = document.getElementById('input').value;
+  //let apiUrl = `https://api.inaturalist.org/v1/places/autocomplete?q=${input}`;
+  let apiUrl = `https://developer.nps.gov/api/v1/parks?q=${input}&api_key=r3fB97qgKCf8K7GgPyVqKYMzYygbYTG0z2hATQw7`;
+
+  try {
+    const response = await fetch(apiUrl);
+    if (!response.ok) {
+      throw new Error('Network response was not ok');
+    }
+    const data = await response.json();
+    
+    // Loop through each result from the API
+    data.results.forEach(async (result) => {
+      console.log(result)
+      const placeId = result.id;
+      const placeName = result.name;
+
+      // Fetch the identifications for the place
+      const identificationsUrl = `https://api.inaturalist.org/v1/identifications?place_id=${placeId}`;
+      const identificationsResponse = await fetch(identificationsUrl);
+      if (!identificationsResponse.ok) {
+        throw new Error('Network response for identifications was not ok');
+      }
+      const identificationsData = await identificationsResponse.json();
+      console.log("ident",identificationsData.results)
+      console.log("pn",placeName)
+      // Check if there are any observations associated with the place
+      if (identificationsData.results.length > 0 && identificationsData.results[0].observation) {
+        const imageUrl = identificationsData.results[0].observation.photos[0].url;
+         // Display the place name
+        const placeNameElement = document.createElement('p');
+        placeNameElement.textContent = placeName;
+        document.getElementById('apiData').appendChild(placeNameElement);
+        // Display the image
+        const imageElement = document.createElement('img');
+        imageElement.src = imageUrl;
+        document.getElementById('apiData').appendChild(imageElement);
+      } else {
+        console.log('No observations found for this place');
+        console.log("place_id", placeId);
+        console.log("name", placeName);
+      }
+    });
+  } catch (error) {
+    console.log('There was a problem with the fetch operation:', error);
+  }
+}
+
+
+
   </script>
   
   
