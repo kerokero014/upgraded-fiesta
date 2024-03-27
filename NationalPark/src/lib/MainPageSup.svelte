@@ -1,4 +1,5 @@
 <script>
+  import ImageCarousel from "./ImageCarousel.svelte";
 </script>
 
 <div class="area1">
@@ -12,7 +13,9 @@
   <button class="button">Get Supplies!</button>
 </div>
 
-<div class="area2"></div>
+<div class="area2">
+  <ImageCarousel />
+</div>
 
 <style>
   .button {
