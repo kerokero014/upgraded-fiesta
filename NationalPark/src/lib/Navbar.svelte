@@ -1,6 +1,6 @@
 <script>
-   import { getUserName } from '../js/login.mjs';
-   const userName = getUserName();
+  import { getUserName } from "../js/login.mjs";
+  const userName = getUserName();
   let links = [
     { name: "Home", url: "/" },
     { name: "Plan Trip", url: "/plan_trip/index.html" },
@@ -10,26 +10,27 @@
   ];
 
   let activeLink = "/";
-  const token = localStorage.getItem('so-token');
+  const token = localStorage.getItem("so-token");
   function deleteToken() {
     // Remove the token from local storage
-    localStorage.removeItem('so-token');
-    
+    localStorage.removeItem("so-token");
+
     // Optionally, you can perform additional actions after deleting the token
     // For example, you might want to navigate to a different page or update the UI
-    
+
     // For now, let's just log a message to indicate the token was deleted
-    alert('Form data deleted successfully!');}
+    alert("Form data deleted successfully!");
+  }
 </script>
 
 <nav class="navigation">
   {#each links as link (link.url)}
     <a href={link.url} class:active={activeLink === link.url}>{link.name}</a>
   {/each}
-   {#if userName}
-   <a class="login" href="/">Welcome, {userName}!</a>
-   <a on:click={deleteToken}  href="/">Log out</a>
-   {:else}
-   <a class="login" href="../login/login.html">Log in</a>
-   {/if}
+  {#if userName}
+    <a class="login" href="/">Welcome, {userName}!</a>
+    <a on:click={deleteToken} href="/">Log out</a>
+  {:else}
+    <a class="login" href="../login/login.html"><strong>Log in</strong></a>
+  {/if}
 </nav>
