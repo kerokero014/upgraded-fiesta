@@ -33,11 +33,12 @@
     padding: 10px;
     margin: 0 -20px;
     text-align: center;
+    gap: 25px;
   }
   .Pparks img {
     padding: 5px;
-    width: 355px;
-    height: 250px;
+    width: 375px;
+    height: 270px;
     border-radius: 15px;
   }
 

@@ -45,7 +45,7 @@ header {
   gap: 20px;
 }
 
-.flex-box>p {
+.flex-box > p {
   margin: 20px;
 }
 
@@ -142,19 +142,35 @@ header {
 .third p {
   font-size: 25px;
   padding: 5px;
+  margin: auto;
 }
 
 .fourth {
   position: relative;
-  background: #003329e0;
+  background: rgba(222, 218, 218, 0.759);
   padding: 100px;
+  color: black;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  gap: 0px 0px;
+  grid-template-areas: "area1 area2";
+}
+
+.area1 {
+  grid-area: area1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   color: white;
 }
 
 .fourth h1,
 .fourth h2 {
   font-size: 3rem;
-  color: white;
+  color: black;
   margin-bottom: 20px;
   text-align: left;
 }
@@ -162,4 +178,6 @@ header {
 .fourth p {
   font-size: 25px;
   padding: 5px;
+  margin: auto;
+  color: black;
 }

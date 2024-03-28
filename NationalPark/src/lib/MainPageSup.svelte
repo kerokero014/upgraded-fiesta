@@ -1,17 +1,21 @@
 <script>
-  
+  import ImageCarousel from "./ImageCarousel.svelte";
 </script>
 
-<h1>Missing equipment?</h1>
-<p>
-  We offer a wide range of equipment for rent to help you get the most out of
-  your outdoor experience. Whether you need a tent, sleeping bag, or hiking
-  boots, we have you covered. Our team of experts will help you find the perfect
-  equipment for your trip.
-</p>
-<button class="button">Get Supplies!</button>
+<div class="area1">
+  <h1>Missing equipment?</h1>
+  <p>
+    We offer a wide range of equipment for rent to help you get the most out of
+    your outdoor experience. Whether you need a tent, sleeping bag, or hiking
+    boots, we have you covered. Our team of experts will help you find the
+    perfect equipment for your trip.
+  </p>
+  <button class="button">Get Supplies!</button>
+</div>
 
-
+<div class="area2">
+  <ImageCarousel />
+</div>
 
 <style>
   .button {

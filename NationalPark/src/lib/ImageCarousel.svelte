@@ -1,0 +1,101 @@
+<script>
+  import { crossfade } from "svelte/transition";
+  import { onMount } from "svelte";
+
+  const [send, receive] = crossfade({
+    duration: 500, // Adjust transition duration as needed
+  });
+
+  let images = [
+    "../src/imgs/jacket1.jpg",
+    "../src/imgs/boots1.webp",
+    "../src/imgs/tent1.webp",
+    "../src/imgs/backpack1.jpg",
+    "../src/imgs/sleeping1.webp",
+    "../src/imgs/igloo1.webp",
+  ];
+
+  let index = 0;
+
+  console.log(images);
+
+  function next() {
+    index = (index + 1) % images.length;
+  }
+
+  function prev() {
+    index = (index - 1 + images.length) % images.length;
+  }
+
+  onMount(() => {
+    // Preload images to ensure smooth transitions
+    images.forEach((src) => {
+      const img = new Image();
+      img.src = src;
+    });
+  });
+</script>
+
+<div class="carousel">
+  <button on:click={prev} class="prev">Previous</button>
+  <div class="card">
+    {#key index}
+      <img
+        src={images[index]}
+        alt={`carousel image ${index + 1}`}
+        in:receive={{ key: index }}
+        out:send={{ key: index }}
+      />
+    {/key}
+    <div class="card-body"></div>
+  </div>
+  <button on:click={next} class="next">Next</button>
+</div>
+
+<style>
+  .card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+
+  .carousel img {
+    max-width: 60%;
+    height: auto;
+    transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+  }
+
+  .next,
+  .prev {
+    position: absolute;
+    padding: 10px 20px;
+    background-color: #283b29; /* Green */
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    border-radius: 12px;
+  }
+
+  .next {
+    right: 0;
+  }
+
+  .prev {
+    left: 0;
+  }
+
+  .next:hover,
+  .prev:hover {
+    background-color: #623711;
+  }
+</style>
