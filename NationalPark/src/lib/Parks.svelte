@@ -31,7 +31,8 @@
       } while (allParks.length < totalResults);
 
       parksList = allParks.map(park => ({
-        name: park.fullName
+        name: park.fullName,
+        parkCode: park.parkCode
       }));
     } catch (error) {
       console.error("Error fetching data:", error);
@@ -45,49 +46,36 @@
 
 <Header title="National Parks" />
 <Search />
-
 <h1>List of National Parks</h1>
 
 <ul class="park-list">
   {#each parksList as park}
     <li class="park-item">
-      <!-- {#if park.imageUrl}
-        <img src={park.imageUrl} alt={park.name} style="width: 250px; height: 150px; object-fit: cover; margin: 0 auto;">
-      {:else}
-        <div class="no-image-placeholder" style="width: 100px; height: 100px; background-color: #ccc; display: flex; justify-content: center; align-items: center;">
-          No Image
-        </div>
-      {/if} -->
-      <div class="park-name"><a href={`https://www.nps.gov/${park.parkCode}`}>{park.name}</a></div>
+      <div class="park-name" ><a href={`https://www.nps.gov/${park.parkCode}`} target="_blank" class="park-link">{park.name}</a></div>
     </li>
   {/each}
 </ul>
 
-<Footer />
+<footer>
+  <Footer  companyName="Summit Seekers"/>
+  
+</footer>
 
 <style>
   h1 {
     text-align: center;
-    margin: 10px;
+    margin: 20px 0;
+    font-size: 28px;
+    color: #004d40; /* Teal color */
   }
 
-
-  a {
-    color: #007bff; /* Link color */
-    text-decoration: none; /* Remove underline */
-    transition: color 0.3s ease; /* Smooth color transition on hover */
-  }
-
-  a:hover {
-    color: #0056b3; /* Change color on hover */
-  }
-  
   .park-list {
     list-style: none;
     padding: 0;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
+    margin-bottom: 20px;
   }
 
   .park-item {
@@ -95,30 +83,38 @@
     flex-direction: column;
     align-items: center;
     text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 10px; /* Padding around each park item */
   }
 
-  .park-image {
-    width: 100%;
-    height: auto;
-    max-height: 200px; /* Limit image height */
-    object-fit: cover;
-    border-radius: 8px;
-    margin-bottom: 10px;
-  }
-
-  .no-image-placeholder {
-    width: 100%;
-    height: 200px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    background-color: #ccc;
-    border-radius: 8px;
-    margin-bottom: 10px;
+  .park-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Add a bit more shadow on hover */
   }
 
   .park-name {
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
+    margin-bottom: 5px;
+    color: #333; /* Dark text color */
+  }
+
+  .park-link {
+    color: #00796b; /* Dark teal color for links */
+    text-decoration: none;
+    transition: color 0.3s ease; /* Smooth color transition on hover */
+  }
+
+  .park-link:hover {
+    color: #004d40; /* Darker teal color on hover */
+  }
+
+  footer {
+    text-align: center;
+    margin-top: 20px;
   }
 </style>
