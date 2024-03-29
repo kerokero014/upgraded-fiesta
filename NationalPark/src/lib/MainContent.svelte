@@ -1,5 +1,4 @@
 <script>
-  import ImageGrid from "./ImageGrid.svelte";
   import PopularParks from "./PopularParks.svelte";
   import MainPageSup from "./MainPageSup.svelte";
 </script>
@@ -27,8 +26,6 @@
 <section class="third">
   <h1>Most Visited Parks:</h1>
   <PopularParks />
-  <h2>Other parks you might like:</h2>
-  <ImageGrid />
 </section>
 
 <section class="fourth">
