@@ -12,7 +12,8 @@ body::-webkit-scrollbar {
 
 body {
   background: whitesmoke;
-  overflow-x: hidden;
+  overflow-x: hidden; /* Prevents horizontal scrolling */
+  overflow-y: auto;
 }
 
 header {
@@ -179,4 +180,10 @@ header {
   padding: 5px;
   margin: auto;
   color: black;
+}
+
+.fifth{
+  position: relative;
+  color: white;
+  background: #edf2f8b4;
 }
