@@ -18,7 +18,7 @@
 
 <Header title="Summit Seekers" />
 
-<h1>Search for a place</h1>
+<h1>Search for a plece</h1>
 <input type="text" bind:value={inputValue} on:input={handleInput} />
 <button class="button" on:click={handleClick}>Submit</button>
 
