@@ -1,6 +1,7 @@
 <script>
   import PopularParks from "./PopularParks.svelte";
   import MainPageSup from "./MainPageSup.svelte";
+  import Testimonials from "./Testimonials.svelte";
 </script>
 
 <section class="sec">
@@ -30,6 +31,10 @@
 
 <section class="fourth">
   <MainPageSup />
+</section>
+
+<section>
+  <Testimonials />
 </section>
 
 <style>
