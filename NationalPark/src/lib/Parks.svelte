@@ -8,40 +8,63 @@
   const baseURL = "https://developer.nps.gov/api/v1/parks";
   const apiKey = "4NkX3tOUbCHhiaSreQql8y0rvhstMo2Z4zWOWR3C";
 
-  async function fetchAllData() {
-    const limit = 50; // Results per page
-    let offset = 0; // Initial offset
-    let allParks = [];
+ async function fetchAllData() {
+  const limit = 50; // Results per page
+  let offset = 0; // Initial offset
+  let allParks = [];
 
-    try {
-      let totalResults = 0;
+  try {
+    let totalResults = 0;
 
-      // Fetch each page until all results are retrieved
-      do {
-        const res = await fetch(
-          `${baseURL}?api_key=${apiKey}&limit=${limit}&start=${offset}`
-        );
-        if (!res.ok) {
-          throw new Error("Server response wasn't OK");
-        }
-        const data = await res.json();
-        totalResults = data.total;
-        allParks = allParks.concat(data.data); // Concatenate current page data
-        offset += limit; // Increment offset for next page
-      } while (allParks.length < totalResults);
+    // Fetch each page until all results are retrieved
+    do {
+      const res = await fetch(
+        `${baseURL}?api_key=${apiKey}&limit=${limit}&start=${offset}`
+      );
+      if (!res.ok) {
+        throw new Error("Server response wasn't OK");
+      }
+      const data = await res.json();
+      totalResults = data.total;
+      allParks = allParks.concat(data.data); // Concatenate current page data
+      offset += limit; // Increment offset for next page
+    } while (allParks.length < totalResults);
 
-      parksList = allParks.map(park => ({
-        name: park.fullName,
-        parkCode: park.parkCode
-      }));
-    } catch (error) {
-      console.error("Error fetching data:", error);
-    }
+    parksList = allParks.map((park) => ({
+      name: park.fullName,
+      parkCode: park.parkCode,
+      activities: park.activities
+        .slice(0, 7) // Limit activities to 7
+        .reduce((acc, activity) => `${acc}, ${activity.name}`, "")
+        .slice(2),
+    }));
+  } catch (error) {
+    console.error("Error fetching data:", error);
   }
+}
+
 
   onMount(() => {
     fetchAllData();
   });
+
+  let hoveredPark = null;
+
+  function handleMouseOver(park) {
+    hoveredPark = park;
+  }
+
+  function handleMouseOut() {
+    hoveredPark = null;
+  }
+
+  function handleFocus(park) {
+  hoveredPark = park;
+}
+
+  function handleBlur() {
+    hoveredPark = null;
+  }
 </script>
 
 <Header title="National Parks" />
@@ -50,15 +73,33 @@
 
 <ul class="park-list">
   {#each parksList as park}
-    <li class="park-item">
-      <div class="park-name" ><a href={`https://www.nps.gov/${park.parkCode}`} target="_blank" class="park-link">{park.name}</a></div>
+    <li
+    class="park-item"
+    on:mouseover={() => handleMouseOver(park)}
+    on:mouseout={handleMouseOut}
+    on:focus={() => handleFocus(park)} 
+    on:blur={handleBlur}
+    >
+
+      <section class="park-name">
+        <a
+          href={`https://www.nps.gov/${park.parkCode}`}
+          target="_blank"
+          class="park-link">{park.name}</a
+        >
+      </section>
+      {#if hoveredPark === park}
+        <h4>Activities</h4>
+        {#if hoveredPark === park}
+        <div class="park-activities">{park.activities}</div>
+        {/if}
+      {/if}
     </li>
   {/each}
 </ul>
 
 <footer>
-  <Footer  companyName="Summit Seekers"/>
-  
+  <Footer companyName="Summit Seekers" />
 </footer>
 
 <style>
@@ -66,7 +107,7 @@
     text-align: center;
     margin: 20px 0;
     font-size: 28px;
-    color: #004d40; /* Teal color */
+    color: #004d40; 
   }
 
   .park-list {
@@ -111,6 +152,26 @@
 
   .park-link:hover {
     color: #004d40; /* Darker teal color on hover */
+  }
+
+  .park-activities {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #666;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  li {
+    cursor: pointer;
+  }
+
+  div {
+    background-color: #f0f0f0;
+    padding: 5px;
+    border: 1px solid #ccc;
+    margin-top: 5px;
   }
 
   footer {
