@@ -1,6 +1,6 @@
 <script>
   import Navbar from "../lib/Navbar.svelte";
-  let imagePath = "../src/imgs/logo.jpg";
+  let imagePath = "../src/imgs/logo.png";
   let imageAltText = "Summit Seekers Logo";
 </script>
 
@@ -11,8 +11,6 @@
 
 <style>
   .logo img {
-    font-size: 2rem;
-    margin: 10px 3px;
     width: 20%;
   }
 </style>
