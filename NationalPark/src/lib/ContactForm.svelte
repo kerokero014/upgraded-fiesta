@@ -12,7 +12,7 @@
   };
 </script>
 
-<Header title="Contact Us" />
+<Header />
 
 <section>
   <div class="container">
