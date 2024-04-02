@@ -104,7 +104,6 @@
   .div1 {
     background: #7950bc;
     grid-area: div1;
-    background-image: url(https://raw.githubusercontent.com/RahulSahOfficial/testimonials_grid_section/5532c958b7d3c9b910a216b198fdd21c73112d84/images/bg-pattern-quotation.svg);
     background-repeat: no-repeat;
     background-position-x: 25rem;
   }
