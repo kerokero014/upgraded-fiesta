@@ -27,27 +27,28 @@
     }
   </script>
   <Header title="Log In" />
-  <section>
-  <div class="container">
-    
-    <div class="contactusform">
-      <h2>Fill The Form Below</h2>
-      <div class="formBox">
-        <div class="inputBox w50">
-          <input type="text" bind:value={name} required />
-          <span>First Name</span>
-        </div>
-        <div class="inputBox w50">
-          <input type="email" bind:value={email} required />
-          <span>Email Address</span>
-        </div>
-        <div class="inputBox w50">
-          <button class="button" on:click={storeFormData}>Send</button>
+    <section>
+      <div class="container">
+        
+        <div class="contactusform">
+          <h2>Fill The Form Below</h2>
+          <div class="formBox">
+            <div class="inputBox w50">
+              <input type="text" bind:value={name} required />
+              <span>First Name</span>
+            </div>
+            <div class="inputBox w50">
+              <input type="email" bind:value={email} required />
+              <span>Email Address</span>
+            </div>
+            <div class="inputBox w50">
+              <button class="button" on:click={storeFormData}>Send</button>
+            </div>
+          </div>
         </div>
       </div>
-    </div>
-  </div>
-</section>
+    </section>
+  
   <!-- Svelte form -->
   <Footer companyName="Summit Seekers" />
   <style>
@@ -240,7 +241,6 @@
     }
   
     @media screen and (min-width: 900px) {
-     
       section {
         position: relative;
         display: flex;
