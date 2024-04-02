@@ -18,6 +18,7 @@ body {
 
 header {
   background-color: #ffffffa6;
+  height: 165px;
   position: sticky;
   top: 0;
   left: 0;
