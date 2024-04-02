@@ -34,6 +34,6 @@
     <a class="login" href="../login/login.html"><strong>Log in</strong></a>
   {/if}
   <a href="../plan_trip/bucket_list">
-    <img id="bucket" src="src/imgs/bucket.png" alt="Icon">
+    <img id="bucket" src="../src/imgs/bucket.png" alt="Icon">
   </a>
 </nav>
