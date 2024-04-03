@@ -8,7 +8,7 @@
       reviewTitle:
         "Summite Seekers website I explored proved to be an invaluable resource for both novice and experienced outdoor enthusiasts",
       reviewContent:
-        "“  What sets this platform apart is its comprehensive educational content, featuring detailed guides on trail safety, navigation techniques, and Leave No Trace principles ”",
+        "“  What sets this platform apart is its comprehensive educational content, featuring detailed guides on trail safety, navigation techniques, and Leave No Trace principles. What got me into this was the ability to plan my trips and lear about them in the same page. Am I missing something I don't need to go somwhere else”",
     },
     {
       name: "Jonathan Walters",
@@ -102,29 +102,58 @@
     color: white;
   }
   .div1 {
-    background: #7950bc;
+    background: #2a8271;
     grid-area: div1;
     background-repeat: no-repeat;
     background-position-x: 25rem;
   }
+
+  .div1:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #3e3d3d;
+  }
   .div2 {
-    background: #58916c;
+    background: #003329;
     grid-area: div2;
   }
+  .div2:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #525151;
+  }
   .div3 {
-    background: rgb(137, 151, 124);
+    background: #2c6e64;
     grid-area: div3;
     color: black;
   }
+  .div3:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #343234;
+  }
+
   .div4 {
-    background: white;
+    background: #7ca19b;
     grid-area: div5;
     color: black;
   }
+
+  .div4:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #393737;
+  }
   .div5 {
-    background: #44594a;
+    background: #18403a;
     grid-area: div4;
   }
+  .div5:hover {
+    transition: 0.5s;
+    color: #fff;
+    background-color: #2d2c2c;
+  }
+
   .userdetails {
     display: flex;
   }
@@ -163,7 +192,7 @@
   }
   .review h4 {
     font-size: 2rem;
-    color: #f3deff;
+    color: #ffdede;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 0.8rem;
