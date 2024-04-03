@@ -39,11 +39,10 @@ header {
   font-weight: 500;
   font-size: 25px;
 }
-#bucket{
+#bucket {
   margin-bottom: -5px;
   width: 30px;
   height: 30px;
-
 }
 .flex-box {
   display: flex;
@@ -56,7 +55,7 @@ header {
   margin: 20px;
 }
 #bucket img:hover,
-#bucket img.active{
+#bucket img.active {
   color: white;
 }
 .navigation a:hover,
@@ -91,7 +90,7 @@ header {
   font-weight: 700;
   text-align: center;
   padding: 20px;
-  text-shadow: -4px 5px 2px rgba(0,0,0,0.6);
+  text-shadow: -10px 13px 6px rgba(0, 0, 0, 0.6);
 }
 
 .sec {
@@ -192,7 +191,7 @@ header {
   color: black;
 }
 
-.fifth{
+.fifth {
   position: relative;
   color: white;
   background: #edf2f8df;
