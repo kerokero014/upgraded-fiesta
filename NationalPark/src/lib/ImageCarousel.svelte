@@ -1,9 +1,11 @@
 <script>
   import { crossfade } from "svelte/transition";
   import { onMount } from "svelte";
+  import { elasticOut } from "svelte/easing";
 
   const [send, receive] = crossfade({
-    duration: 500, // Adjust transition duration as needed
+    duration: 800, // Increased transition duration for smoother effect
+    easing: elasticOut, // Changed easing function for a different transition effect
   });
 
   let images = [
@@ -54,9 +56,14 @@
 
 <style>
   .card {
+    background-color: white;
+    width: 600px; /* Set the width of the card */
+    height: 600px; /* Set the height of the card */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
   }
   .carousel {
     display: flex;
@@ -66,7 +73,7 @@
   }
 
   .carousel img {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
@@ -87,11 +94,11 @@
   }
 
   .next {
-    right: 0;
+    right: 170px;
   }
 
   .prev {
-    left: 0;
+    left: 140px;
   }
 
   .next:hover,
