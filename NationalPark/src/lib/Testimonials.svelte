@@ -109,18 +109,22 @@
   }
 
   .div1:hover {
-    transition: 0.5s;
+    transform: scale(98%);
+    transition: 0.3s;
     color: #fff;
     background-color: #3e3d3d;
+    box-shadow: 15px 15px 20px #0000006b;
   }
   .div2 {
     background: #003329;
     grid-area: div2;
   }
   .div2:hover {
+    transform: scale(98%);
     transition: 0.5s;
     color: #fff;
     background-color: #525151;
+    box-shadow: 15px 15px 20px #0000006b;
   }
   .div3 {
     background: #2c6e64;
@@ -128,9 +132,11 @@
     color: black;
   }
   .div3:hover {
+    transform: scale(98%);
     transition: 0.5s;
     color: #fff;
     background-color: #343234;
+    box-shadow: 15px 15px 20px #0000006b;
   }
 
   .div4 {
@@ -140,18 +146,22 @@
   }
 
   .div4:hover {
+    transform: scale(98%);
     transition: 0.5s;
     color: #fff;
     background-color: #393737;
+    box-shadow: 15px 15px 20px #0000006b;
   }
   .div5 {
     background: #18403a;
     grid-area: div4;
   }
   .div5:hover {
+    transform: scale(98%);
     transition: 0.5s;
     color: #fff;
     background-color: #2d2c2c;
+    box-shadow: 15px 15px 20px #0000006b;
   }
 
   .userdetails {
