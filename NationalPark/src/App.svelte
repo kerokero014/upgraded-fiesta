@@ -5,7 +5,7 @@
   import Navbar from "./lib/Navbar.svelte";
 </script>
 
-<Header title="Summit Seekers" />
+<Header />
 
 <ParallaxCont />
 
