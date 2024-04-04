@@ -22,7 +22,9 @@
     }
   }
 </script>
-
+<div>
+  
+</div>
 <input type="search" bind:value={query} />
 <button on:click={searchHandler}>Search</button>
 
@@ -56,6 +58,7 @@
 {/if}
 
 <style>
+  
   input[type="search"] {
     padding: 10px;
     font-size: 16px;

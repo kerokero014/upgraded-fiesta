@@ -45,6 +45,7 @@ export async function server_response(input) {
         // Display the image
         const imageElement = document.createElement('img');
         imageElement.src = imgUrl;
+        imageElement.id = 'dynamic-element';
         imageLink.appendChild(imageElement);
         document.getElementById('apiData').appendChild(imageLink);
         // Create anchor tag for the place name
@@ -57,6 +58,13 @@ export async function server_response(input) {
         buttonElement.textContent = 'add to bucket list';
         buttonElement.onclick = ()=> btn(placeName, imgUrl );
         document.getElementById('apiData').appendChild(buttonElement);
+        const style = document.createElement('style');
+style.textContent = `
+  #dynamic-element {
+    height: 100px;
+  }
+`;
+document.head.appendChild(style);
         // You can do whatever you need with the data here
         // For example, append the data to the DOM
       });

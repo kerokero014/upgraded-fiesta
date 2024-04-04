@@ -17,24 +17,59 @@
 </script>
 
 <Header title="Summit Seekers" />
-
-<h1>Search for a plece</h1>
-<input type="text" bind:value={inputValue} on:input={handleInput} />
-<button class="button" on:click={handleClick}>Submit</button>
-
+<section>
+  <h1 id="search">Search for a plece</h1>
+  <input class="search-container" type="text" bind:value={inputValue} on:input={handleInput} />
+  <button class="button" on:click={handleClick}>Submit</button>
+</section>
 <div id="apiData"></div>
-
 <style>
-  .button {
-    background-color: #04AA6D; /* Green */
-    border: none;
-    color: white;
-    padding: 15px 32px;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
+  #apiData > a > img{
+    height: 20px;
   }
+  section {
+    font-size: 30px;
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+  .search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 500px;
+  height: 50px;
+  margin: 20px;
+}
+
+input[type="text"] {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-right: 5px;
+  font-size: 30px;
+}
+
+button {
+  padding: 8px 12px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 30px;
+  width: 183px;
+  height: 50px;
+}
+#dynamic-element {
+  height: 20px;
+}
+button:hover {
+  background-color: #0056b3;
+}
+
 </style>
 
 <Footer companyName="Summit Seekers" />
