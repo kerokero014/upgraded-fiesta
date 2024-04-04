@@ -39,8 +39,9 @@
 </script>
 
 <div class="carousel">
-  <button on:click={prev} class="prev">Previous</button>
   <div class="card">
+    <button on:click={prev} class="prev">Previous</button>
+
     {#key index}
       <img
         src={images[index]}
@@ -50,8 +51,9 @@
       />
     {/key}
     <div class="card-body"></div>
+
+    <button on:click={next} class="next">Next</button>
   </div>
-  <button on:click={next} class="next">Next</button>
 </div>
 
 <style>
@@ -94,11 +96,11 @@
   }
 
   .next {
-    right: 170px;
+    right: 0px;
   }
 
   .prev {
-    left: 140px;
+    left: 0px;
   }
 
   .next:hover,
