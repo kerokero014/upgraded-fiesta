@@ -18,7 +18,12 @@
       everyone. Our team of experts will help you plan your trip and make sure
       you have everything you need to enjoy your time in the great outdoors.
     </p>
-    <button class="button">Plan a trip!</button>
+    <button
+      class="button"
+      on:click={() =>
+        (window.location.href = "http://localhost:5173/plan_trip/index.html")}
+      >Plan a trip!</button
+    >
   </div>
 
   <img src="./src/imgs/yosemite.jpeg" alt="yosemite" class="image1" />
@@ -40,12 +45,12 @@
 <style>
   .button {
     appearance: button;
-    background-color: #a1d4b6;
+    background-color: #81a791;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
     box-sizing: border-box;
-    color: #ededed;
+    color: #fff;
     cursor: pointer;
     display: inline-block;
     font-family: din-round, sans-serif;
@@ -71,7 +76,7 @@
 
   .button:after {
     background-clip: padding-box;
-    background-color: #37312a;
+    background-color: #5e3716;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;

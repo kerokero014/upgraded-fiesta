@@ -10,19 +10,18 @@
     boots, we have you covered. Our team of experts will help you find the
     perfect equipment for your trip.
   </p>
-  <button class="button">Get Supplies!</button>
+
+  <button class="button" on:click={() => (window.location.href = 'http://localhost:5173/supplies/index.html')}>Get Supplies!</button>
 </div>
 
 <div class="area2">
   <ImageCarousel />
 </div>
 
-
-
 <style>
   .button {
     appearance: button;
-    background-color: #a1d4b6;
+    background-color: #073f1e;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;
@@ -53,7 +52,7 @@
 
   .button:after {
     background-clip: padding-box;
-    background-color: #37312a;
+    background-color: #7b7774;
     border: solid transparent;
     border-radius: 16px;
     border-width: 0 0 4px;

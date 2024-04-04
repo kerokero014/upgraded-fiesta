@@ -1,13 +1,12 @@
 <script>
   import { crossfade } from "svelte/transition";
   import { onMount } from "svelte";
-  import { elasticOut } from "svelte/easing";
+  import { quintOut } from "svelte/easing"; // Changed easing function for a smoother transition effect
 
   const [send, receive] = crossfade({
-    duration: 800, // Increased transition duration for smoother effect
-    easing: elasticOut, // Changed easing function for a different transition effect
+    duration: 50, // Increased transition duration for smoother effect
+    easing: quintOut, // Changed easing function for a smoother transition effect
   });
-
   let images = [
     "../src/imgs/jacket1.jpg",
     "../src/imgs/boots1.webp",
