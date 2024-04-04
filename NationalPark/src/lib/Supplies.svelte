@@ -15,12 +15,21 @@
           throw new Error("Server response wasn't OK");
         }
         const data = await res.json();
-        suppliesList = data.supplies_list;
+        // Initialize each item with a `checked` property
+        suppliesList = data.supplies_list.map(item => ({
+          ...item,
+          checked: false // Add checked property
+        }));
         console.log(suppliesList);
         // suppliesList = data.data.map(item => item.name);
       } catch (error) {
         console.error("Error fetching data:", error);
       }
+  }
+
+  // Function to handle checkbox change
+  function handleCheckChange(item) {
+    item.checked = !item.checked;
   }
 
   onMount(() => {
@@ -35,7 +44,14 @@
   <ul class="supplies-list">
     {#each suppliesList as item}
       <li class="supplies-item">
-        <div class="supplies-name">{item.name}</div>
+        <label>
+          <input 
+            type="checkbox" 
+            bind:checked={item.checked}
+            on:change={(event) => handleCheckChange(item)}
+          >
+          <span class="supplies-name">{item.name}</span>
+        </label>
       </li>
     {/each}
   </ul>
