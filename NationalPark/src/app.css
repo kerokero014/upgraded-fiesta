@@ -19,7 +19,7 @@ body {
 header {
   background-color: #f5f5f5d6;
   height: 165px;
-  position: sticky;
+  position: fixed;
   top: 0;
   left: 0;
   width: 100%;

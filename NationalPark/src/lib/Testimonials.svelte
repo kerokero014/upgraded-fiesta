@@ -98,7 +98,7 @@
   .eachdiv {
     padding: 1rem 2rem;
     border-radius: 0.8rem;
-    box-shadow: 5px 5px 20px #6d6b6b6b;
+    box-shadow: 5px 5px 20px #7977776b;
     color: white;
   }
   .div1 {
@@ -135,7 +135,7 @@
     transform: scale(98%);
     transition: 0.5s;
     color: #fff;
-    background-color: #343234;
+    background-color: #525152;
     box-shadow: 15px 15px 20px #0000006b;
   }
 
@@ -149,7 +149,7 @@
     transform: scale(98%);
     transition: 0.5s;
     color: #fff;
-    background-color: #393737;
+    background-color: #4b4949;
     box-shadow: 15px 15px 20px #0000006b;
   }
   .div5 {
@@ -184,13 +184,13 @@
     margin: 0;
   }
   .detbox .name {
-    color: hsl(0, 0%, 81%);
+    color: hsl(0, 6%, 90%);
     font-size: 2rem;
     margin-bottom: 0.1rem;
     font-weight: 600;
   }
   .detbox .name.dark {
-    color: #b4bbc5;
+    color: #d9dcde;
   }
   .detbox .designation {
     color: hsl(0, 0%, 81%);
@@ -198,7 +198,7 @@
     font-size: 1.5rem;
   }
   .detbox .designation.dark {
-    color: #49505a;
+    color: rgb(216, 218, 221);
   }
   .review h4 {
     font-size: 2rem;
@@ -217,8 +217,12 @@
     opacity: 50%;
     line-height: 1.5;
   }
+
+  .review p:hover {
+    color: white;
+  }
   .review.dark p {
-    color: black;
+    color: white;
   }
 
   @media only screen and (max-width: 1000px) {
