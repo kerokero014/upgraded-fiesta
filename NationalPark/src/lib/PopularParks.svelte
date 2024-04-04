@@ -126,6 +126,11 @@
     cursor: hand;
   }
 
+  .imageGrid .tile:hover{
+    transform: scale(95%);
+    transition: 0.3s;
+  }
+
   .imageGrid .tile:before {
     content: "";
     background-color: rgba(15, 15, 15, 0.5);

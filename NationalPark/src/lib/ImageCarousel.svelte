@@ -1,11 +1,12 @@
 <script>
   import { crossfade } from "svelte/transition";
   import { onMount } from "svelte";
+  import { quintOut } from "svelte/easing"; // Changed easing function for a smoother transition effect
 
   const [send, receive] = crossfade({
-    duration: 500, // Adjust transition duration as needed
+    duration: 50, // Increased transition duration for smoother effect
+    easing: quintOut, // Changed easing function for a smoother transition effect
   });
-
   let images = [
     "../src/imgs/jacket1.jpg",
     "../src/imgs/boots1.webp",
@@ -37,8 +38,9 @@
 </script>
 
 <div class="carousel">
-  <button on:click={prev} class="prev">Previous</button>
   <div class="card">
+    <button on:click={prev} class="prev">Previous</button>
+
     {#key index}
       <img
         src={images[index]}
@@ -48,15 +50,21 @@
       />
     {/key}
     <div class="card-body"></div>
+
+    <button on:click={next} class="next">Next</button>
   </div>
-  <button on:click={next} class="next">Next</button>
 </div>
 
 <style>
   .card {
+    background-color: white;
+    width: 600px; /* Set the width of the card */
+    height: 600px; /* Set the height of the card */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    border-radius: 15px;
   }
   .carousel {
     display: flex;
@@ -66,7 +74,7 @@
   }
 
   .carousel img {
-    max-width: 60%;
+    max-width: 80%;
     height: auto;
     transition: opacity 0.5s cubic-bezier(0.25, 0.1, 0.25, 1);
   }
@@ -87,11 +95,11 @@
   }
 
   .next {
-    right: 0;
+    right: 0px;
   }
 
   .prev {
-    left: 0;
+    left: 0px;
   }
 
   .next:hover,

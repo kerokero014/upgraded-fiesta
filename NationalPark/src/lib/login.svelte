@@ -26,7 +26,7 @@
       }
     }
   </script>
-  <Header title="Log In" />
+  <Header />
     <section>
       <div class="container">
         
@@ -52,6 +52,7 @@
   <!-- Svelte form -->
   <Footer companyName="Summit Seekers" />
   <style>
+
     /*.button {
     /*background-color: #04AA6D; /* Green */
     /*border: none;
@@ -249,6 +250,7 @@
         min-height: 100vh;
         background-color: var(--lightergrey);
         background-image: url("../src/imgs/1189974.jpg");
+        background-size: cover;
       }
   
       section::before {

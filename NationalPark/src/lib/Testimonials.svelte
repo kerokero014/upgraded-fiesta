@@ -8,7 +8,7 @@
       reviewTitle:
         "Summite Seekers website I explored proved to be an invaluable resource for both novice and experienced outdoor enthusiasts",
       reviewContent:
-        "“  What sets this platform apart is its comprehensive educational content, featuring detailed guides on trail safety, navigation techniques, and Leave No Trace principles ”",
+        "“  What sets this platform apart is its comprehensive educational content, featuring detailed guides on trail safety, navigation techniques, and Leave No Trace principles. What got me into this was the ability to plan my trips and lear about them in the same page. Am I missing something I don't need to go somwhere else”",
     },
     {
       name: "Jonathan Walters",
@@ -98,33 +98,72 @@
   .eachdiv {
     padding: 1rem 2rem;
     border-radius: 0.8rem;
-    box-shadow: 5px 5px 20px #6d6b6b6b;
+    box-shadow: 5px 5px 20px #7977776b;
     color: white;
   }
   .div1 {
-    background: #7950bc;
+    background: #2a8271;
     grid-area: div1;
     background-repeat: no-repeat;
     background-position-x: 25rem;
   }
+
+  .div1:hover {
+    transform: scale(98%);
+    transition: 0.3s;
+    color: #fff;
+    background-color: #3e3d3d;
+    box-shadow: 15px 15px 20px #0000006b;
+  }
   .div2 {
-    background: #58916c;
+    background: #003329;
     grid-area: div2;
   }
+  .div2:hover {
+    transform: scale(98%);
+    transition: 0.5s;
+    color: #fff;
+    background-color: #525151;
+    box-shadow: 15px 15px 20px #0000006b;
+  }
   .div3 {
-    background: rgb(137, 151, 124);
+    background: #2c6e64;
     grid-area: div3;
     color: black;
   }
+  .div3:hover {
+    transform: scale(98%);
+    transition: 0.5s;
+    color: #fff;
+    background-color: #525152;
+    box-shadow: 15px 15px 20px #0000006b;
+  }
+
   .div4 {
-    background: white;
+    background: #7ca19b;
     grid-area: div5;
     color: black;
   }
+
+  .div4:hover {
+    transform: scale(98%);
+    transition: 0.5s;
+    color: #fff;
+    background-color: #4b4949;
+    box-shadow: 15px 15px 20px #0000006b;
+  }
   .div5 {
-    background: #44594a;
+    background: #18403a;
     grid-area: div4;
   }
+  .div5:hover {
+    transform: scale(98%);
+    transition: 0.5s;
+    color: #fff;
+    background-color: #2d2c2c;
+    box-shadow: 15px 15px 20px #0000006b;
+  }
+
   .userdetails {
     display: flex;
   }
@@ -145,13 +184,13 @@
     margin: 0;
   }
   .detbox .name {
-    color: hsl(0, 0%, 81%);
+    color: hsl(0, 6%, 90%);
     font-size: 2rem;
     margin-bottom: 0.1rem;
     font-weight: 600;
   }
   .detbox .name.dark {
-    color: #b4bbc5;
+    color: #d9dcde;
   }
   .detbox .designation {
     color: hsl(0, 0%, 81%);
@@ -159,11 +198,11 @@
     font-size: 1.5rem;
   }
   .detbox .designation.dark {
-    color: #49505a;
+    color: rgb(216, 218, 221);
   }
   .review h4 {
     font-size: 2rem;
-    color: #f3deff;
+    color: #ffdede;
     font-weight: 600;
     line-height: 1.5;
     margin-bottom: 0.8rem;
@@ -178,8 +217,12 @@
     opacity: 50%;
     line-height: 1.5;
   }
+
+  .review p:hover {
+    color: white;
+  }
   .review.dark p {
-    color: black;
+    color: white;
   }
 
   @media only screen and (max-width: 1000px) {
