@@ -5,7 +5,7 @@
 
   let suppliesList = [];
 
-  // const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
+  // const baseURL = "https://npp-api.onrender.com/";
   // const apiKey = "4NkX3tOUbCHhiaSreQql8y0rvhstMo2Z4zWOWR3C";
 
   async function fetchData() {
@@ -28,7 +28,7 @@
   });
 </script>
 
-<Header title="Supplies" />
+<Header />
 <h1>Supplies Checklist</h1>
 
 {#if suppliesList.length > 0}
