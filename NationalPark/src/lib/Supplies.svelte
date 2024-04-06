@@ -32,6 +32,7 @@
               <p>Description: {item.description}</p>
               <p>Category: {item.category}</p>
               <p>Website: {item.website}</p>
+
             </div>
           </li>
         {/each}

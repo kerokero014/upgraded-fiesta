@@ -6,6 +6,7 @@
   let description = "";
   let category = [];
   let website = "";
+  let image = "";
 
   async function handleSubmit(event) {
     event.preventDefault();
@@ -16,12 +17,12 @@
       description,
       category,
       website,
+      image,
     };
     console.log(data);
     const response = await PostDataSupplyAPI(data);
     console.log(response);
   }
-
 
   function showMessage() {
     alert("Supply added successfully!");
@@ -49,6 +50,9 @@
     <label for="website">Website:</label>
     <input type="text" id="website" bind:value={website} required />
 
+    <label for="image">Image:</label><br />
+    <input type="file" id="image" name="image" bind:value={image} />
+    
     <button type="submit" on:click={showMessage}>Add Supply</button>
   </form>
 </div>
