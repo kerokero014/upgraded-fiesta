@@ -5,6 +5,8 @@
   import Header from "./MainHeader.svelte";
   import Footer from "./MainFooter.svelte";
   import {server_response} from "../js/search"
+  import PlanTripForm from './PlanTripForm.svelte';
+
   let inputValue = '';
 
   function handleInput(event) {
@@ -16,7 +18,7 @@
   }
 </script>
 
-<Header title="Summit Seekers" />
+<Header />
 <section>
   <h1 id="search">Search for a place</h1>
   <input class="search-container" type="text" bind:value={inputValue} on:input={handleInput} />
@@ -24,6 +26,9 @@
 </section>
 
 <div id="apiData"></div>
+
+<PlanTripForm />
+
 <Footer companyName="Summit Seekers" />
 <style>
  
