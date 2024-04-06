@@ -1,36 +1,88 @@
 <script>
+  import { PostTripPlanningAPI } from "../js/requests.mjs";
+
+  let tripName = "";
+  let tripDate = "";
+  let tripLocation = "";
+  let createBy = "";
+  let tripDescription = "";
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+    const tripData = {
+      tripName,
+      tripDate,
+      tripLocation,
+      createBy,
+      tripDescription,
+    };
+    const response = await PostTripPlanningAPI(tripData);
+    if (response.status === 201) {
+      alert("Trip planned successfully!");
+    } else {
+      alert("Failed to plan the trip. Please try again later.");
+    }
+  }
+
+  let message = "";
+
+  function handleMessage() {
+    message = "Trip planned successfully!";
+  }
 </script>
 
 <div class="card">
   <h1>Plan your trip here!</h1>
 
-  <form>
-    <label for="destination">Destination:</label>
-    <input type="text" id="destination" name="destination" required />
+  <form on:submit|preventDefault={handleFormSubmit}>
+    <label for="tripName">Destination:</label>
+    <input
+      type="text"
+      id="tripName"
+      name="tripName"
+      bind:value={tripName}
+      required
+    />
     <br />
-    <label for="date">Date:</label>
-    <input type="date" id="date" name="date" required />
+    <label for="tripDate">Trip Date:</label>
+    <input
+      type="text"
+      id="tripDate"
+      name="tripDate"
+      bind:value={tripDate}
+      required
+    />
     <br />
-    <label for="duration">Duration:</label>
-    <input type="number" id="duration" name="duration" required />
+    <label for="tripLocation">Trip Location:</label>
+    <input
+      type="text"
+      id="tripLocation"
+      name="tripLocation"
+      bind:value={tripLocation}
+      required
+    />
     <br />
-    <label for="budget">Budget:</label>
-    <input type="number" id="budget" name="budget" required />
+    <label for="createBy">Who is creating this Trip?</label>
+    <input type="text" id="createBy" name="createBy" bind:value={createBy} />
     <br />
-    <label for="activities">Activities:</label>
-    <input type="text" id="activities" name="activities" required />
-    <br />
-    <label for="lodging">Lodging:</label>
-    <input type="text" id="lodging" name="lodging" required />
-    <br />
-    <label for="transportation">Transportation:</label>
-    <input type="text" id="transportation" name="transportation" required />
-    <br />
-    <label for="notes">Notes:</label>
-    <textarea id="notes" name="notes" required></textarea>
-    <br />
-    <button type="submit">Submit</button>
+    <label for="tripDescription">Trip Description:</label>
+    <textarea
+      id="tripDescription"
+      name="tripDescription"
+      bind:value={tripDescription}
+      required
+    ></textarea>
+    <!--
+    <label for="tripImage">Trip Image:/label>
+    <input type="file" id="tripImage" name="tripImage" required />
+    -->
+    <button type="submit" on:click={handleMessage}>Submit</button>
   </form>
+
+  <!--message for user-->
+  {#if message}
+    <p>{message}</p>
+  {/if}
 </div>
 
 <style>
