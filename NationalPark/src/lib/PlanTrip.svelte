@@ -20,10 +20,11 @@
 <section>
   <h1 id="search">Search for a place</h1>
   <input class="search-container" type="text" bind:value={inputValue} on:input={handleInput} />
-  <button class="button" on:click={handleClick}>Submit</button>
+  <button class="button" on:click={handleClick}>Search</button>
 </section>
 
 <div id="apiData"></div>
+<Footer companyName="Summit Seekers" />
 <style>
  
   #apiData{
@@ -75,6 +76,4 @@ button:hover {
 }
 
 </style>
-
-<Footer companyName="Summit Seekers" />
 

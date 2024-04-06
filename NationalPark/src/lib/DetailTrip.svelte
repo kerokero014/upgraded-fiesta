@@ -42,9 +42,54 @@
         storedData.forEach(item => {
           const imgElement = document.createElement('img')
           imgElement.src = `${item.imageURL}`;
+          imgElement.id = 'dynamic-element';
           const placeNameElement = document.createElement('h1')
+          placeNameElement.id = 'dynamic-name';
           const buttonElement = document.createElement('button')
+          buttonElement.id = 'dynamic-button';
           buttonElement.textContent = 'exclude'
+          const style = document.createElement('style');
+style.textContent = `
+  #dynamic-element {
+    height: 30vh; /* set height to 100% of viewport height */
+    /* Box Shadow Properties */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* horizontal-offset vertical-offset blur spread color */
+    /* Other Styling */
+    padding: 20px;
+    background-color: white;
+  }
+  #dynamic-button {
+    height: 45px;
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    /* Box Shadow Properties */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* horizontal-offset vertical-offset blur spread color */
+    /* Other Styling */
+    background-color: #a04545;
+    border: 2px solid #000000;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  #dynamic-button:hover {
+    background-color: #6f0b0b;
+    border-color: #45a049;
+  }
+  
+  #dynamic-button:active {
+    background-color: #3e8e41;
+    border-color: #3e8e41;
+  }
+  #dynamic-name {
+    font-size: 5vh; /* set height to 100% of viewport height */
+  }
+`;
+document.head.appendChild(style);
           buttonElement.onclick = function() {
     // Call a function to handle the exclusion of the place
     deletePlaceFromLocalStorage(item.placeName);
@@ -67,6 +112,12 @@
   <Header title="Summit Seeggers" />
   <div id="container"></div>
   <style>
+    #container{
+        display: flex;
+        flex-direction: row;
+        gap: 20px;
+        margin: 40px;
+    }
   </style>
   
   <Footer companyName="Summit Seekers" />

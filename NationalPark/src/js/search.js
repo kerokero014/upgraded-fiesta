@@ -18,6 +18,7 @@ export async function server_response(input) {
 
     // Store the updated data back into localStorage
     localStorage.setItem("placesData", JSON.stringify(storedData));
+    alert(`Place stored succesfully in your bucket list.`);
 }
 
   try {
@@ -63,7 +64,12 @@ export async function server_response(input) {
         const style = document.createElement('style');
 style.textContent = `
   #dynamic-element {
-    height: 50vh; /* set height to 100% of viewport height */
+    height: 30vh; /* set height to 100% of viewport height */
+    /* Box Shadow Properties */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* horizontal-offset vertical-offset blur spread color */
+    /* Other Styling */
+    padding: 20px;
+    background-color: white;
   }
   #dynamic-button {
     display: inline-block;
@@ -72,6 +78,9 @@ style.textContent = `
     font-weight: bold;
     text-decoration: none;
     color: #fff;
+    /* Box Shadow Properties */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* horizontal-offset vertical-offset blur spread color */
+    /* Other Styling */
     background-color: #4CAF50;
     border: 2px solid #4CAF50;
     border-radius: 5px;
@@ -89,7 +98,7 @@ style.textContent = `
     border-color: #3e8e41;
   }
   #dynamic-name {
-    font-size: 10vh; /* set height to 100% of viewport height */
+    font-size: 5vh; /* set height to 100% of viewport height */
   }
 `;
 document.head.appendChild(style);
