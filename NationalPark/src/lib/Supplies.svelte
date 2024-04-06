@@ -19,7 +19,7 @@
 <Header />
 
 <main>
-  <h1>Supplies Checklist</h1>
+  <h1>All our Supplies</h1>
   <div class="supplies__checkList">
     {#if suppliesList.length > 0}
       <ul class="supplies-list">
