@@ -6,7 +6,7 @@
 
   let suppliesList = [];
 
-  //for more API information go to 
+  //for more API information go to
   //https://npp-api.onrender.com/api-docs/
 
   onMount(async () => {
@@ -32,7 +32,6 @@
               <p>Description: {item.description}</p>
               <p>Category: {item.category}</p>
               <p>Website: {item.website}</p>
-
             </div>
           </li>
         {/each}

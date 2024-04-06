@@ -8,6 +8,8 @@
   let website = "";
   let image = "";
 
+  let Message = "";
+
   async function handleSubmit(event) {
     event.preventDefault();
     const data = {
@@ -25,7 +27,7 @@
   }
 
   function showMessage() {
-    alert("Supply added successfully!");
+    Message = "Supply added successfully!";
   }
 </script>
 
@@ -52,9 +54,13 @@
 
     <label for="image">Image:</label><br />
     <input type="file" id="image" name="image" bind:value={image} />
-    
+
     <button type="submit" on:click={showMessage}>Add Supply</button>
   </form>
+
+  {#if Message}
+    <p>{Message}</p>
+  {/if}
 </div>
 
 <style>
