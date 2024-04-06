@@ -1,4 +1,5 @@
 <script>
+  import { fetchDatafromAPI } from "../js/requests.mjs";
   import Header from "./MainHeader.svelte";
   import Footer from "./MainFooter.svelte";
 
@@ -10,6 +11,9 @@
   const sendMessage = () => {
     console.log({ firstName, lastName, email, message });
   };
+
+
+  fetchDatafromAPI().then(data => console.log(data));
 </script>
 
 <Header />

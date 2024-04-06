@@ -2,54 +2,66 @@
   import { onMount } from "svelte";
   import Header from "./MainHeader.svelte";
   import Footer from "../lib/MainFooter.svelte";
+  import SupplyForm from "./SupplyForm.svelte";
 
   let suppliesList = [];
 
-  // const baseURL = "http://server-nodejs.cit.byui.edu:3000/";
-  // const apiKey = "4NkX3tOUbCHhiaSreQql8y0rvhstMo2Z4zWOWR3C";
+  //for more API information go to 
+  //https://npp-api.onrender.com/api-docs/
 
-  async function fetchData() {
-      try {
-        const res = await fetch("/json/supplies.json");
-        if (!res.ok) {
-          throw new Error("Server response wasn't OK");
-        }
-        const data = await res.json();
-        suppliesList = data.supplies_list;
-        console.log(suppliesList);
-        // suppliesList = data.data.map(item => item.name);
-      } catch (error) {
-        console.error("Error fetching data:", error);
-      }
-  }
-
-  onMount(() => {
-    fetchData();
+  onMount(async () => {
+    const response = await fetch("https://npp-api.onrender.com/supplies");
+    const data = await response.json();
+    suppliesList = data;
   });
 </script>
 
-<Header title="Supplies" />
-<h1>Supplies Checklist</h1>
+<Header />
 
-{#if suppliesList.length > 0}
-  <ul class="supplies-list">
-    {#each suppliesList as item}
-      <li class="supplies-item">
-        <div class="supplies-name">{item.name}</div>
-      </li>
-    {/each}
-  </ul>
-{:else}
-  <p>Loading...</p>
-{/if}
+<main>
+  <h1>Supplies Checklist</h1>
+  <div class="supplies__checkList">
+    {#if suppliesList.length > 0}
+      <ul class="supplies-list">
+        {#each suppliesList as item}
+          <li class="supplies-item">
+            <div class="supplies-name">
+              <h4>{item.name}</h4>
+              <p>Quantity: {item.quantity}</p>
+              <p>Price: {item.price}</p>
+              <p>Description: {item.description}</p>
+              <p>Category: {item.category}</p>
+              <p>Website: {item.website}</p>
+            </div>
+          </li>
+        {/each}
+      </ul>
+    {:else}
+      <p>Loading...</p>
+    {/if}
+  </div>
 
-<Footer companyName="Summit Seekers"/>
+  <!-- Add a form to add new supplies to the list -->
+  <SupplyForm />
+</main>
+<Footer companyName="Summit Seekers" />
 
 <style>
+  .supplies__checkList {
+    display: flex;
+    flex-direction: column;
+    margin: auto 20px auto;
+  }
+
+  main {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
   h1 {
     text-align: center;
-    margin: 20px 0;
-    font-size: 28px;
+    margin: 20px auto;
+    font-size: 48px;
     color: #004d40; /* Teal color */
   }
 
@@ -60,9 +72,11 @@
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 20px;
     margin-bottom: 20px;
+    cursor: pointer;
   }
 
   .supplies-item {
+    font-size: 25px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -76,14 +90,10 @@
   }
 
   .supplies-name {
-    font-size: 18px;
-    font-weight: bold;
-    margin-bottom: 5px;
-    color: #00796b;
-  }
-
-  footer {
-    text-align: center;
-    margin-top: 20px;
+    font-size: 28px;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
 </style>
