@@ -18,14 +18,20 @@
 
 <Header title="Summit Seekers" />
 <section>
-  <h1 id="search">Search for a plece</h1>
+  <h1 id="search">Search for a place</h1>
   <input class="search-container" type="text" bind:value={inputValue} on:input={handleInput} />
   <button class="button" on:click={handleClick}>Submit</button>
 </section>
+
 <div id="apiData"></div>
 <style>
-  #apiData > a > img{
-    height: 20px;
+ 
+  #apiData{
+    display: flex;
+  align-items: center; /* vertically center */
+  flex-direction: column;
+  height: 20px;
+  gap: 10px;
   }
   section {
     font-size: 30px;
@@ -63,9 +69,7 @@ button {
   width: 183px;
   height: 50px;
 }
-#dynamic-element {
-  height: 20px;
-}
+
 button:hover {
   background-color: #0056b3;
 }

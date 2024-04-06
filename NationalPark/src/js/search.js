@@ -51,17 +51,45 @@ export async function server_response(input) {
         // Create anchor tag for the place name
         const placeLink = document.createElement('a');
         const placeNameElement = document.createElement('p');
+        placeNameElement.id = 'dynamic-name';
         placeNameElement.textContent = placeName;
         placeLink.appendChild(placeNameElement);
         document.getElementById('apiData').appendChild(placeLink);
         const buttonElement = document.createElement('button');
+        buttonElement.id = 'dynamic-button';
         buttonElement.textContent = 'add to bucket list';
         buttonElement.onclick = ()=> btn(placeName, imgUrl );
         document.getElementById('apiData').appendChild(buttonElement);
         const style = document.createElement('style');
 style.textContent = `
   #dynamic-element {
-    height: 100px;
+    height: 50vh; /* set height to 100% of viewport height */
+  }
+  #dynamic-button {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: bold;
+    text-decoration: none;
+    color: #fff;
+    background-color: #4CAF50;
+    border: 2px solid #4CAF50;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+  }
+  
+  #dynamic-button:hover {
+    background-color: #45a049;
+    border-color: #45a049;
+  }
+  
+  #dynamic-button:active {
+    background-color: #3e8e41;
+    border-color: #3e8e41;
+  }
+  #dynamic-name {
+    font-size: 10vh; /* set height to 100% of viewport height */
   }
 `;
 document.head.appendChild(style);
