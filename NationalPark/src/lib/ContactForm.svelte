@@ -12,8 +12,7 @@
     console.log({ firstName, lastName, email, message });
   };
 
-
-  fetchDatafromAPI().then(data => console.log(data));
+  fetchDatafromAPI().then((data) => console.log(data));
 </script>
 
 <Header />

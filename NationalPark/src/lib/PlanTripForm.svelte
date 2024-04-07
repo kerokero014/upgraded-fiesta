@@ -107,8 +107,6 @@
   }
 
   input[type="text"],
-  input[type="number"],
-  input[type="date"],
   textarea {
     width: 300px;
     padding: 8px;

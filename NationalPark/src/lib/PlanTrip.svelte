@@ -7,6 +7,12 @@
   import { server_response } from "../js/search";
   import PlanTripForm from "./PlanTripForm.svelte";
 
+  let showForm = false;
+
+  const toggleForm = () => {
+    showForm = !showForm;
+  };
+
   let inputValue = "";
 
   function handleInput(event) {
@@ -27,16 +33,40 @@
     bind:value={inputValue}
     on:input={handleInput}
   />
+
   <button class="button" on:click={handleClick}>Search</button>
+
+  <button class="showFormBttn" on:click={toggleForm}>
+    {#if showForm}
+      Changed Your Mind?
+    {/if}
+    {#if !showForm}
+      Create a New Trip!
+    {/if}
+  </button>
 </section>
 
 <div id="apiData"></div>
 
-<PlanTripForm />
+{#if showForm}
+  <PlanTripForm />
+{/if}
 
 <Footer companyName="Summit Seekers" />
 
 <style>
+  .showFormBttn {
+    padding: 8px 12px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 30px;
+    width: 353px;
+    height: 50px;
+    margin: 25px;
+  }
   #apiData {
     display: flex;
     align-items: center; /* vertically center */
