@@ -3,6 +3,7 @@
   import Header from "./MainHeader.svelte";
   import Footer from "../lib/MainFooter.svelte";
   import SupplyForm from "./SupplyForm.svelte";
+  import Modal from "./Modal.svelte";
 
   let suppliesList = [];
   let showsForm = false;
@@ -47,17 +48,14 @@
   </div>
 
   <button class="showFormBttn" on:click={toggleSForm}>
-    {#if showsForm}
-      Changed Your Mind?
-    {/if}
-    {#if !showsForm}
-      Create a New Trip!
-    {/if}
+    Add a New Supply!
   </button>
 
   <!-- Add a form to add new supplies to the list -->
   {#if showsForm}
-    <SupplyForm />
+    <Modal>
+      <SupplyForm />
+    </Modal>
   {/if}
 </main>
 <Footer companyName="Summit Seekers" />

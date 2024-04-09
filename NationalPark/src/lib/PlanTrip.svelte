@@ -6,6 +6,7 @@
   import Footer from "./MainFooter.svelte";
   import { server_response } from "../js/search";
   import PlanTripForm from "./PlanTripForm.svelte";
+  import Modal from "./Modal.svelte";
 
   let showForm = false;
 
@@ -37,21 +38,17 @@
   <button class="button" on:click={handleClick}>Search</button>
 
   <button class="showFormBttn" on:click={toggleForm}>
-    {#if showForm}
-      Changed Your Mind?
-    {/if}
-    {#if !showForm}
-      Create a New Trip!
-    {/if}
+    Create a New Trip!
   </button>
 </section>
 
 <div id="apiData"></div>
 
 {#if showForm}
-  <PlanTripForm />
+  <Modal>
+    <PlanTripForm />
+  </Modal>
 {/if}
-
 <Footer companyName="Summit Seekers" />
 
 <style>
