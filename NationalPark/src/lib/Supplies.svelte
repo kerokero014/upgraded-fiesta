@@ -5,6 +5,7 @@
   import SupplyForm from "./SupplyForm.svelte";
 
   let suppliesList = [];
+  let showsForm = false;
 
   //for more API information go to
   //https://npp-api.onrender.com/api-docs/
@@ -14,6 +15,10 @@
     const data = await response.json();
     suppliesList = data;
   });
+
+  const toggleSForm = () => {
+    showsForm = !showsForm;
+  };
 </script>
 
 <Header />
@@ -41,12 +46,89 @@
     {/if}
   </div>
 
+  <button class="showFormBttn" on:click={toggleSForm}>
+    {#if showsForm}
+      Changed Your Mind?
+    {/if}
+    {#if !showsForm}
+      Create a New Trip!
+    {/if}
+  </button>
+
   <!-- Add a form to add new supplies to the list -->
-  <SupplyForm />
+  {#if showsForm}
+    <SupplyForm />
+  {/if}
 </main>
 <Footer companyName="Summit Seekers" />
 
 <style>
+  .showFormBttn {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    font-size: 20px;
+    background-color: #004d40; /* Teal color */
+    color: white;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+
+  .showFormBttn:hover {
+    background-color: #00332b; /* Darker teal color */
+  }
+
+  .supplies__checkList {
+    display: flex;
+    flex-direction: column;
+    margin: auto 20px auto;
+  }
+
+  main {
+    max-width: 1800px;
+    margin: 0 auto;
+    padding: 20px;
+  }
+  h1 {
+    text-align: center;
+    margin: 20px auto;
+    font-size: 48px;
+    color: #004d40; /* Teal color */
+  }
+
+  .supplies-list {
+    list-style: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 20px;
+    margin-bottom: 20px;
+    cursor: pointer;
+  }
+
+  .supplies-item {
+    font-size: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    background-color: #f5f5f5; /* Light gray background */
+    padding: 10px; /* Padding around each park item */
+  }
+
+  .supplies-name {
+    font-size: 28px;
+    margin: 10px 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
   .supplies__checkList {
     display: flex;
     flex-direction: column;

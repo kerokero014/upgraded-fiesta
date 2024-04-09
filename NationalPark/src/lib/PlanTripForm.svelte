@@ -81,7 +81,7 @@
 
   <!--message for user-->
   {#if message}
-    <p>{message}</p>
+    <h3>{message}</h3>
   {/if}
 </div>
 
