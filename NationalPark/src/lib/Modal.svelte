@@ -45,7 +45,8 @@
   }
 
   .close {
-    color: #aaa;
+    background-color: tomato;
+    color: whitesmoke;
     float: right;
     font-size: 28px;
     font-weight: bold;
@@ -53,8 +54,9 @@
 
   .close:hover,
   .close:focus {
-    color: black;
+    color: red;
     text-decoration: none;
     cursor: pointer;
+    background-color: #fefefe;
   }
 </style>
